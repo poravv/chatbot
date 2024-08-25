@@ -1,0 +1,9 @@
+Podrias indicarme de que año eres?
+a) Soy alumno  del primer año
+b) Soy alumno del según  año
+c) Soy alumno  del tercer año
+d) Soy alumno  del cuarto año
+e) Soy alumno  del quinto año
+f) Soy alumno del sexto año
+g) Soy alumno de transferencia o regularizante
+0) Salir
