@@ -9,8 +9,8 @@ ARG PORT
 CMD ["npm", "start"]
 
 # Construir la imagen Docker
-#sudo docker build -t mi_app .
+#sudo docker build -t chatbot-universidad-01 .
 
 # Ejecutar el contenedor Docker
-#sudo docker run -e RAILWAY_STATIC_URL=http://localhost -e PUBLIC_URL=http://localhost -e PORT=3003 -p 3003:3000 mi_app
+#sudo docker run -e RAILWAY_STATIC_URL=http://localhost -e PUBLIC_URL=http://localhost -e PORT=3005 -p 3005:3000 --name chat-universidad-01 chatbot-universidad-01
 
