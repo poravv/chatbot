@@ -1,8 +1,7 @@
-Tu consulta es: 
-A) administrativa 
-B) académica 
-C) documentación 
+Tu consulta es:
+A) administrativa
+B) académica
+C) documentación
 D) inscripción
 E) otros ( favor especificar)
-F) Malla curricular
 0) Salir

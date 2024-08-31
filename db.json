@@ -1,0 +1,105 @@
+[
+  {
+    "ref": "b7fb4a2c-aeb0-41ef-bbd1-8fc807c466b0",
+    "keyword": "719210620acbcb612fd83c2ef68ea4e0",
+    "answer": "Hola",
+    "options": {},
+    "from": "595992756462",
+    "refSerialize": "c22e4066d61d81721def9b25d8a397e8"
+  },
+  {
+    "ref": "ans_b8787e04-a218-4689-819c-ac723a7ac7b8",
+    "keyword": "key_bb878da2-f5ba-4603-be31-459590a3470b",
+    "answer": "__call_action__",
+    "options": {
+      "media": null,
+      "buttons": [],
+      "capture": false,
+      "child": null,
+      "delay": 0,
+      "idle": null,
+      "ref": null,
+      "nested": [],
+      "keyword": {},
+      "callback": true
+    },
+    "refSerialize": "439ea0cfc5b8634559f5f7de49926727",
+    "from": "595992756462"
+  },
+  {
+    "ref": "ans_03898c8f-003d-4fba-a9eb-62449bc58971",
+    "keyword": "key_cd3c9de3-70ed-4471-a469-5ea8c829ea18",
+    "answer": "Buenas soy Dr. Ariel Santander Director Médico. 🫱🏽‍🫲🏾",
+    "options": {
+      "media": null,
+      "buttons": [],
+      "capture": false,
+      "child": null,
+      "delay": 2000,
+      "idle": null,
+      "ref": null,
+      "nested": [],
+      "keyword": {},
+      "callback": false
+    },
+    "refSerialize": "c971f232e38f67ee972ef05481e8355e",
+    "from": "595992756462"
+  },
+  {
+    "ref": "ans_d4c9bb8c-d47c-4397-80f2-8fc5bf905721",
+    "keyword": "ans_03898c8f-003d-4fba-a9eb-62449bc58971",
+    "answer": "Mis horarios de atención  para los alumnos  son: Lunes Marte y Miércoles de 8:00 a 17:00 hs déjame tus duda que en la brevedad estaré respondiendo.",
+    "options": {
+      "media": null,
+      "buttons": [],
+      "capture": false,
+      "child": null,
+      "delay": 3000,
+      "idle": null,
+      "ref": null,
+      "nested": [],
+      "keyword": {},
+      "callback": false
+    },
+    "refSerialize": "bf68f4888275e5fcca4b343260c2b7c9",
+    "from": "595992756462"
+  },
+  {
+    "ref": "ans_9bdb057a-4d25-46c6-b913-b0d22e8d07e3",
+    "keyword": "ans_d4c9bb8c-d47c-4397-80f2-8fc5bf905721",
+    "answer": "Podrias indicarme tu nombre y apellido por favor. \n_Para salir del contestador responda 0_",
+    "options": {
+      "media": null,
+      "buttons": [],
+      "capture": true,
+      "child": null,
+      "delay": 0,
+      "idle": null,
+      "ref": null,
+      "nested": [],
+      "keyword": {},
+      "callback": true
+    },
+    "refSerialize": "6bd79b7f23d1d84d50944c9dc8115e17",
+    "from": "595992756462"
+  },
+  {
+    "ref": "ans_4d29acdb-e257-40fe-ba25-f86fcd353fb1",
+    "keyword": "key_55dcceaa-d0d9-47fe-a139-f599b0843964",
+    "answer": "La sesión ha sido cancelada por inactividad.",
+    "options": {
+      "media": null,
+      "buttons": [],
+      "capture": false,
+      "child": null,
+      "delay": 0,
+      "idle": null,
+      "ref": null,
+      "nested": [],
+      "keyword": {},
+      "callback": false
+    },
+    "refSerialize": "b7418e86df5a0feb05a28ef724466f8f",
+    "from": "595992756462"
+  }
+]
