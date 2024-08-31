@@ -9,6 +9,7 @@ const MockAdapter = require('@bot-whatsapp/database/mock');
 const pool = require('./dbConfig');
 const path = require('path');
 const fs = require('fs');
+let idusuario = '595992424757';
 
 const app = express();
 const port = 3000;
@@ -228,8 +229,8 @@ const flowFinal = addKeyword([EVENTS.ACTION])
         try {
             const connection = await pool.getConnection();
             const [result] = await connection.query(
-                `INSERT INTO det_consulta (nombre_apellido, documento, tipo, descripcion,numero,estado,consulta) VALUES (?, ? ,? ,?, ?, ?, ?)`, 
-                [clienteInfo.nombre_apellido, clienteInfo.documento, clienteInfo.tipo, clienteInfo.descripcion, ctx.from, 'Pendiente', clienteInfo.consulta]);
+                `INSERT INTO det_consulta (nombre_apellido, documento, tipo, descripcion,numero,estado,consulta,idusuario) VALUES (?, ? ,? ,?, ?, ?, ?, ?)`,
+                [clienteInfo.nombre_apellido, clienteInfo.documento, clienteInfo.tipo, clienteInfo.descripcion, ctx.from, 'Pendiente', clienteInfo.consulta, idusuario]);
 
             connection.release();
             console.log('Consulta almacenada en la base de datos con éxito.');
