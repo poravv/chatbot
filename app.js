@@ -9,7 +9,7 @@ const MockAdapter = require('@bot-whatsapp/database/mock');
 const pool = require('./dbConfig');
 const path = require('path');
 const fs = require('fs');
-let idusuario = '595992424757';
+let idusuario = 'user004';
 
 const app = express();
 const port = 3000;
