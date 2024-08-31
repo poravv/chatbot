@@ -72,6 +72,9 @@ _Para salir del contestador responda 0_`
             await state.update({ timeoutId: timeoutId });
 
             if (ctx.body.toLowerCase() == "0") {
+                const myState = state?.getMyState();
+                var timeoutId = myState.timeoutId;
+                clearTimeout(timeoutId);
                 await state.update({ iniciado: false, enCurso: null });
                 await flowDynamic("Gracias por comunicarte, si desea volver a generar el contestador envie !consulta")
             } else {
@@ -95,6 +98,9 @@ _Para salir del contestador responda 0_`
             await state.update({ timeoutId: timeoutId });
 
             if (ctx.body.toLowerCase() == "0") {
+                const myState = state?.getMyState();
+                var timeoutId = myState.timeoutId;
+                clearTimeout(timeoutId);
                 await state.update({ iniciado: false, enCurso: null });
                 await flowDynamic("Gracias por comunicarte, si desea volver a generar el contestador envie !consulta")
             } else {
@@ -133,7 +139,6 @@ const flowItems = addKeyword([EVENTS.ACTION])
         },
         async (ctx, { gotoFlow, fallBack, flowDynamic, state }) => {
 
-
             const myState = state?.getMyState();
             var timeoutId = myState.timeoutId;
             timeoutId = handleInactivity(state, gotoFlow);
@@ -166,7 +171,9 @@ const flowItems = addKeyword([EVENTS.ACTION])
                     await state.update({ enCurso: flowFinal });
                     return gotoFlow(flowFinal);
                 case "0":
-                    clienteInfo.tipo = '';
+                    const myState = state?.getMyState();
+                    var timeoutId = myState.timeoutId;
+                    clearTimeout(timeoutId);
                     await flowDynamic("_Saliendo... Puedes volver a acceder al contestador enviando !consulta_");
                     await state.update({ iniciado: false, enCurso: null });
                     break;
@@ -208,6 +215,9 @@ const flowConsultas = addKeyword([EVENTS.ACTION])
                     await state.update({ enCurso: flowFinal });
                     return gotoFlow(flowFinal);
                 case "0":
+                    const myState = state?.getMyState();
+                    var timeoutId = myState.timeoutId;
+                    clearTimeout(timeoutId);
                     await state.update({ iniciado: false, enCurso: null });
                     return await flowDynamic(
                         "Saliendo... Puedes volver a acceder a este chat escribiendo !consulta"
@@ -239,9 +249,13 @@ const flowFinal = addKeyword([EVENTS.ACTION])
             await flowDynamic(`Gracias ${clienteInfo.nombre_apellido}, te respondere la duda en la brevedad posible`)
             await flowDynamic("Saludos!")
             clienteInfo = {}
+            const myState = state?.getMyState();
+            var timeoutId = myState.timeoutId;
+            clearTimeout(timeoutId);
         } catch (error) {
             console.error('Error al guardar el pedido en la base de datos:', error);
             await state.update({ iniciado: false, enCurso: null });
+            clearTimeout(timeoutId);
         }
     })
 
@@ -264,7 +278,7 @@ const flowAdministrativo = addKeyword([EVENTS.ACTION])
     .addAnswer('Puedes comunicarte a https://wa.me/595992756462', async (ctx, { state, gotoFlow }) => {
         const myState = state?.getMyState();
         var timeoutId = myState.timeoutId;
-        timeoutId = handleInactivity(state, gotoFlow);
+        clearTimeout(timeoutId);
         await state.update({ timeoutId: timeoutId });
     })
 
@@ -273,6 +287,9 @@ const flowInactividad = addKeyword([EVENTS.ACTION])
     .addAnswer('Contestador cancelado por inactividad.', async (ctx,
         { state }) => {
         await state.update({ iniciado: false, enCurso: null });
+        const myState = state?.getMyState();
+        var timeoutId = myState.timeoutId;
+        clearTimeout(timeoutId);
     })
 
 const main = async () => {
@@ -326,6 +343,9 @@ const handleInactivity = (state, gotoFlow, timeout = 1800000) => {
     return setTimeout(async () => {
         try {
             console.log('Timeout ejecutado');
+            const myState = state?.getMyState();
+            var timeoutId = myState.timeoutId;
+            clearTimeout(timeoutId);
             return gotoFlow(flowInactividad);
         } catch (error) {
             console.log(error)
