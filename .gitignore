@@ -49,7 +49,6 @@ bower_components/
 
 # Docker files
 docker-compose.yml
-Dockerfile
 .dockerignore
 
 # Build directories
