@@ -284,7 +284,7 @@ const flowAdministrativo = addKeyword([EVENTS.ACTION])
 
 
 const flowInactividad = addKeyword([EVENTS.ACTION])
-    .addAnswer('Contestador cancelado por inactividad.', async (ctx,
+    .addAction( async (ctx,
         { state }) => {
         await state.update({ iniciado: false, enCurso: null });
         const myState = state?.getMyState();
@@ -343,9 +343,6 @@ const handleInactivity = (state, gotoFlow, timeout = 1800000) => {
     return setTimeout(async () => {
         try {
             console.log('Timeout ejecutado');
-            const myState = state?.getMyState();
-            var timeoutId = myState.timeoutId;
-            clearTimeout(timeoutId);
             return gotoFlow(flowInactividad);
         } catch (error) {
             console.log(error)
